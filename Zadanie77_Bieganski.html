@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <script language="JavaScript">
+            var timerId = null;
+
+            function CKE_Open()
+            {
+                window.location = "https://cke.gov.pl";
+            }
+
+            function setCKETimeout() {
+                timerId = setTimeout(function() {
+                    CKE_Open();
+                }, 3000);
+            }
+
+            function GDA_Open()
+            {
+                window.location = "https://www.gdansk.pl";
+            }
+
+            function setGDATimeout() {
+                timerId = setTimeout(function() {
+                    GDA_Open();
+                }, 5000);
+            }
+
+            function Obywatel_Open()
+            {
+                window.location = "https://obywatel.gov.pl/";
+            }
+
+            function setObywatelTimeout() {
+                timerId = setTimeout(function() {
+                    Obywatel_Open();
+                }, 10000);
+            }
+
+            function page_refresh()
+            {
+                location.reload();
+                return false;
+            }
+
+            function setpageTimeout() {
+                timerId = setTimeout(function() {
+                    page_refresh();
+                }, 7000);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" name="przycisk1" value="Strona CKE" onclick="setCKETimeout(' ')">
+            <input type="button" name="przycisk2" value="Strona GDA" onclick="setGDATimeout(' ')">
+            <input type="button" name="przycisk3" value="Strona Obywatel" onclick="setObywatelTimeout(' ')">
+            <input type="button" name="przycisk4" value="Odświerzenie" onclick="setpageTimeout(' ')">
+        </form>
+    </body>
+</html>
